@@ -46,7 +46,7 @@ export default function Header() {
           return response.json();
         })
         .then((profileInfo) => {
-          // setRole(profileInfo.role || "");
+          setRole(profileInfo.role || "");
          
         })
         .catch((error) => {
