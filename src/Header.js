@@ -26,7 +26,11 @@ export default function Header() {
         setUserInfo(profileInfo);
       })
       .catch((error) => {
-        console.error("Error fetching user profile:", error);
+        if (error.response && error.response.status === 404) {
+          console.log("Not logged in");
+        } else {
+          console.error("Error fetching user profile:", error);
+        }
       });
   }, [setUserInfo]);
 

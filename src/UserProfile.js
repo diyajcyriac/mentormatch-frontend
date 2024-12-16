@@ -11,7 +11,6 @@ export default function UserProfile({
   interests,
   picture,
 }) {
-  console.log("Picture URL:", picture);
   return (
     <div className="card">
       {/* Top half of the card */}

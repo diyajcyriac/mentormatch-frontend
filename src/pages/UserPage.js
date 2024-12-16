@@ -12,7 +12,6 @@ export default function UserPage() {
 
   useEffect(() => {
     if (userInfo?.id) {
-      console.log("Fetching profile for userId:", userInfo.id);
 
       fetch(`https://mentormatch-backend-y3wu.onrender.com/user/${userInfo.id}`, {
         credentials: "include",
@@ -27,10 +26,14 @@ export default function UserPage() {
           setRole(data.role || "");
         })
         .catch((error) => {
-          console.error("Error fetching profile:", error);
+          if (error.response && error.response.status === 404) {
+            console.log("Not logged in");
+          } else {
+            console.error("Error fetching user profile:", error);
+          }
         });
     } else {
-      console.log("userInfo is not available yet");
+      console.log("Not logged in yet");
     }
   }, [userInfo?.id]);
 
@@ -49,7 +52,11 @@ export default function UserPage() {
         setProfileInfo(data);
       })
       .catch((error) => {
-        console.error("Error fetching user profile:", error);
+        if (error.response && error.response.status === 404) {
+          console.log("Not logged in");
+        } else {
+          console.error("Error fetching user profile:", error);
+        }
       });
   }, [id]);
 

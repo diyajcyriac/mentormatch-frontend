@@ -6,8 +6,6 @@ import "./posts.css";
 
 export default function Post({ _id, title, summary, cover, content, createdAt, author }) {
   const coverImageUrl = cover ? 'https://mentormatch-backend-y3wu.onrender.com/' + cover : 'default-image.jpg'; 
-
-  console.log(author);
   const authorName = author && author.username ? author.username : 'Anonymous';
 
   const handleLinkClick = (e) => {
