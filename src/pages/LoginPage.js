@@ -9,11 +9,7 @@ export default function LoginPage() {
   const [redirect, setRedirect] = useState(false);
   const { setUserInfo } = useContext(UserContext);
 
-  useEffect(() => {
-    alert(
-      "Login as:\nFor mentee: Username: Admin, Password: 1234\nFor mentor: Username: Admin_mentor, Password: 1234"
-    );
-  }, []);
+
 
   async function login(ev) {
     ev.preventDefault();
