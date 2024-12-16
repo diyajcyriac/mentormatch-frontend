@@ -21,7 +21,7 @@ export default function Register1Page() {
         }
         const data = { username, password, role };
         try {
-            const response = await fetch('https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/register-step-1', {
+            const response = await fetch('https://mentormatch-backend-y3wu.onrender.com/register-step-1', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),

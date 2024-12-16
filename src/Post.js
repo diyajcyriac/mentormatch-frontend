@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./posts.css";
 
 export default function Post({ _id, title, summary, cover, content, createdAt, author }) {
-  const coverImageUrl = cover ? 'https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/' + cover : 'default-image.jpg'; 
+  const coverImageUrl = cover ? 'https://mentormatch-backend-y3wu.onrender.com/' + cover : 'default-image.jpg'; 
 
   console.log(author);
   const authorName = author && author.username ? author.username : 'Anonymous';

@@ -8,7 +8,7 @@ export default function DeleteProfile() {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch('https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/profile', {
+    fetch('https://mentormatch-backend-y3wu.onrender.com/profile', {
       credentials: 'include',
     })
       .then((response) => response.json())
@@ -31,7 +31,7 @@ export default function DeleteProfile() {
     if (!confirmed) return;
 
     try {
-      const response = await fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/profile", {
+      const response = await fetch("https://mentormatch-backend-y3wu.onrender.com/profile", {
         method: "DELETE",
         credentials: "include",
       });

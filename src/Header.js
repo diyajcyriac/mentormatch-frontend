@@ -9,11 +9,11 @@ export default function Header() {
   const navigate = useNavigate();
   const { setUserInfo, userInfo } = useContext(UserContext);
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [role, setRole] = useState("");
+  const [role, setRole] = useState("");
 
   // Fetch user info and role
   useEffect(() => {
-    fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/profile", {
+    fetch("https://mentormatch-backend-y3wu.onrender.com/profile", {
       credentials: "include",
     })
       .then((response) => {
@@ -30,34 +30,34 @@ export default function Header() {
       });
   }, [setUserInfo]);
 
-  // useEffect(() => {
-  //   if (userInfo?.id) {
-  //     fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/user/${userInfo.id}`, {
-  //       credentials: "include",
-  //     })
-  //       .then((response) => {
-  //         if (!response.ok) {
-  //           throw new Error(`Error: ${response.status}`);
-  //         }
-  //         return response.json();
-  //       })
-  //       .then((profileInfo) => {
-  //         // setRole(profileInfo.role || "");
+  useEffect(() => {
+    if (userInfo?.id) {
+      fetch(`https://mentormatch-backend-y3wu.onrender.com/user/${userInfo.id}`, {
+        credentials: "include",
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Error: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((profileInfo) => {
+          // setRole(profileInfo.role || "");
          
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error fetching profile:", error);
-  //       });
-  //   } else {
-  //     console.log("userInfo is not available yet");
-  //   }
-  // }, [userInfo?.id]); 
+        })
+        .catch((error) => {
+          console.error("Error fetching profile:", error);
+        });
+    } else {
+      console.log("userInfo is not available yet");
+    }
+  }, [userInfo?.id]); 
   
 
   // Logout function
   async function logout() {
     try {
-      await fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/logout", {
+      await fetch("https://mentormatch-backend-y3wu.onrender.com/logout", {
         credentials: "include",
         method: "POST",
       });
@@ -85,7 +85,7 @@ export default function Header() {
             <Link to="/profiles">People</Link>
             <Link to="/create">Create Post</Link>
             <Link to="/match-making">Match Making</Link>
-            {/* {role === "mentor" && <Link to="/requests">Requests</Link>} */}
+            {role === "mentor" && <Link to="/requests">Requests</Link>}
             <Link to={`/profile/${userId}`}>My Profile</Link>
             <a onClick={logout} style={{ cursor: "pointer" }}>
               Logout

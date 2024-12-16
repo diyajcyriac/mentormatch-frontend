@@ -10,7 +10,7 @@ const MatchMaking = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const userResponse = await fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/profile", {
+        const userResponse = await fetch("https://mentormatch-backend-y3wu.onrender.com/profile", {
           method: "GET",
           credentials: "include",
         });
@@ -24,7 +24,7 @@ const MatchMaking = () => {
 
         if (userData && userData.id) {
           const matchResponse = await fetch(
-            `https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/matchmaking?userId=${userData.id}`,
+            `https://mentormatch-backend-y3wu.onrender.com/matchmaking?userId=${userData.id}`,
             {
               method: "GET",
               credentials: "include",
@@ -81,7 +81,7 @@ const MatchMaking = () => {
                 <div className="match-card-header">
                   <Link to={`/profile/${id}`}>
                     <img
-                      src={`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/${picture}`}
+                      src={`https://mentormatch-backend-y3wu.onrender.com/${picture}`}
                       alt={`${username}'s profile`}
                       className="match-profile-picture"
                     />
