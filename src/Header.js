@@ -13,7 +13,7 @@ export default function Header() {
 
   // Fetch user info and role
   useEffect(() => {
-    fetch("https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/profile", {
+    fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/profile", {
       credentials: "include",
     })
       .then((response) => {
@@ -32,7 +32,7 @@ export default function Header() {
 
   useEffect(() => {
     if (userInfo?.id) {
-      fetch(`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/user/${userInfo.id}`, {
+      fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/user/${userInfo.id}`, {
         credentials: "include",
       })
         .then((response) => {
@@ -57,7 +57,7 @@ export default function Header() {
   // Logout function
   async function logout() {
     try {
-      await fetch("https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/logout", {
+      await fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/logout", {
         credentials: "include",
         method: "POST",
       });

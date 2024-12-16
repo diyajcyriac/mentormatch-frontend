@@ -51,7 +51,7 @@ export default function CreatePost() {
     data.set('file', files[0]);
 
     try {
-      const response = await fetch('https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/post', {
+      const response = await fetch('https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/post', {
         method: 'POST',
         body: data,
         credentials: 'include',

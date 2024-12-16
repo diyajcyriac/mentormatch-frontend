@@ -14,7 +14,7 @@ export default function Register2Page() {
 
   useEffect(() => {
     if (userId) {
-      fetch(`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/profile/${userId}`)
+      fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/profile/${userId}`)
         .then((response) => response.json())
         .then((profileInfo) => {
           setSkills(profileInfo.skills?.join(", ") || "");
@@ -52,7 +52,7 @@ export default function Register2Page() {
     };
 
     try {
-      const response = await fetch("https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/register-step-2", {
+      const response = await fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/register-step-2", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

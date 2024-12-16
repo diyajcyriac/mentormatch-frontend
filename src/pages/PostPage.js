@@ -9,7 +9,7 @@ export default function PostPage() {
   const {userInfo} = useContext(UserContext);
   const {id} = useParams();
   useEffect(() => {
-    fetch(`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/post/${id}`)
+    fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/post/${id}`)
       .then(response => {
         response.json().then(postInfo => {
           setPostInfo(postInfo);
@@ -32,7 +32,7 @@ export default function PostPage() {
         </div>
       )}
       <div className="image">
-        <img src={`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/${postInfo.cover}`} alt=""/>
+        <img src={`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/${postInfo.cover}`} alt=""/>
       </div>
       <div className="content" dangerouslySetInnerHTML={{__html:postInfo.content}} />
     </div>

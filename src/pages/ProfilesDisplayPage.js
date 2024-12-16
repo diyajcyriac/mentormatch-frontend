@@ -8,7 +8,7 @@ export default function ProfilesDisplayPage() {
 
   const fetchUsers = (filters = {}) => {
     const query = new URLSearchParams(filters).toString();
-    fetch(`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/users?${query}`)
+    fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/users?${query}`)
       .then((response) => response.json())
       .then((users) => setUsers(users));
   };

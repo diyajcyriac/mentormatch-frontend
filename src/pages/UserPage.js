@@ -14,7 +14,7 @@ export default function UserPage() {
     if (userInfo?.id) {
       console.log("Fetching profile for userId:", userInfo.id);
 
-      fetch(`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/user/${userInfo.id}`, {
+      fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/user/${userInfo.id}`, {
         credentials: "include",
       })
         .then((response) => {
@@ -35,7 +35,7 @@ export default function UserPage() {
   }, [userInfo?.id]);
 
   useEffect(() => {
-    fetch(`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/user/${id}`, {
+    fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/user/${id}`, {
       method: "GET",
       credentials: "include",
     })
@@ -55,7 +55,7 @@ export default function UserPage() {
 
   useEffect(() => {
     if (userInfo?.id && id) {
-      fetch(`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/api/mentorship/request/status?requestor=${userInfo.id}&acceptor=${id}`, {
+      fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/api/mentorship/request/status?requestor=${userInfo.id}&acceptor=${id}`, {
         method: "GET",
         credentials: "include",
       })
@@ -75,7 +75,7 @@ export default function UserPage() {
   }, [userInfo?.id, id]);
 
   const sendRequest = () => {
-    fetch(`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/api/mentorship/request`, {
+    fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/api/mentorship/request`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -116,7 +116,7 @@ export default function UserPage() {
         <div className="card-top">
           <div className="card-image">
             <img
-              src={`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/${profileInfo.picture}`}
+              src={`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/${profileInfo.picture}`}
               alt="Profile"
             />
           </div>

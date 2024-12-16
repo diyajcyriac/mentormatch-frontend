@@ -13,7 +13,7 @@ export default function RequestPage() {
       setLoading(true);
       setError(null); 
       fetch(
-        `https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/api/mentorship/requests?requestor=${userInfo.id}`,
+        `https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/api/mentorship/requests?requestor=${userInfo.id}`,
         {
           method: "GET",
           credentials: "include",
@@ -39,7 +39,7 @@ export default function RequestPage() {
   }, [userInfo?.id]);
 
   const acceptRequest = (requestId) => {
-    fetch(`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/api/mentorship/request/accept/${requestId}`, {
+    fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/api/mentorship/request/accept/${requestId}`, {
       method: "PATCH",
       credentials: "include",
     })
@@ -59,7 +59,7 @@ export default function RequestPage() {
   };
 
   const declineRequest = (requestId) => {
-    fetch(`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/api/mentorship/request/decline/${requestId}`, {
+    fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/api/mentorship/request/decline/${requestId}`, {
       method: "PATCH",
       credentials: "include",
     })
@@ -95,8 +95,8 @@ export default function RequestPage() {
                     <img
                       src={
                         request?.requestor?.picture
-                          ? `https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/${request.requestor.picture}`
-                          : "https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/uploads/image.jpg"
+                          ? `https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/${request.requestor.picture}`
+                          : "https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/uploads/image.jpg"
                       }
                       alt={`${
                         request?.requestor?.username || "Unknown User"

@@ -18,7 +18,7 @@ export default function EditProfile() {
   useEffect(() => {
     if (userInfo?.id) {
       console.log("Fetching profile for userId:", userInfo.id); // Debug log
-      fetch(`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/user/${userInfo.id}`, {
+      fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/user/${userInfo.id}`, {
         credentials: "include",
       })
         .then((response) => {
@@ -64,7 +64,7 @@ export default function EditProfile() {
       formData.set("file", picture);
     }
 
-    const response = await fetch("https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/profile", {
+    const response = await fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/profile", {
       method: "PUT",
       body: formData,
       credentials: "include",

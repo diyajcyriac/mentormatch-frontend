@@ -25,7 +25,7 @@ export default function UserProfile({
         <div className="card-image">
           <Link to={`/profile/${_id}`}>
             <img
-              src={`https://mentormatch-backend-hhausvlg9-diyas-projects-723f1dff.vercel.app/${picture}`}
+              src={`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/${picture}`}
               alt={`${username}'s profile`}
             />
           </Link>
