@@ -139,19 +139,6 @@ export default function EditProfile() {
         </div>
 
         <div className="input-group">
-          <label htmlFor="role">Role</label>
-          <select
-            id="role"
-            value={role}
-            onChange={(ev) => setRole(ev.target.value)}
-          >
-            <option value="">Select Role</option>
-            <option value="mentor">Mentor</option>
-            <option value="mentee">Mentee</option>
-          </select>
-        </div>
-
-        <div className="input-group">
           <label htmlFor="file">Profile Picture</label>
           <input
             type="file"
