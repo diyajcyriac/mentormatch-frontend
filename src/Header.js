@@ -12,46 +12,46 @@ export default function Header() {
   // const [role, setRole] = useState("");
 
   // Fetch user info and role
-  // useEffect(() => {
-  //   fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/profile", {
-  //     credentials: "include",
-  //   })
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error(`Error: ${response.status}`);
-  //       }
-  //       return response.json();
-  //     })
-  //     .then((profileInfo) => {
-  //       setUserInfo(profileInfo);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching user profile:", error);
-  //     });
-  // }, [setUserInfo]);
-
   useEffect(() => {
-    if (userInfo?.id) {
-      fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/user/${userInfo.id}`, {
-        credentials: "include",
+    fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/profile", {
+      credentials: "include",
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status}`);
+        }
+        return response.json();
       })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`Error: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then((profileInfo) => {
-          setRole(profileInfo.role || "");
+      .then((profileInfo) => {
+        setUserInfo(profileInfo);
+      })
+      .catch((error) => {
+        console.error("Error fetching user profile:", error);
+      });
+  }, [setUserInfo]);
+
+  // useEffect(() => {
+  //   if (userInfo?.id) {
+  //     fetch(`https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/user/${userInfo.id}`, {
+  //       credentials: "include",
+  //     })
+  //       .then((response) => {
+  //         if (!response.ok) {
+  //           throw new Error(`Error: ${response.status}`);
+  //         }
+  //         return response.json();
+  //       })
+  //       .then((profileInfo) => {
+  //         // setRole(profileInfo.role || "");
          
-        })
-        .catch((error) => {
-          console.error("Error fetching profile:", error);
-        });
-    } else {
-      console.log("userInfo is not available yet");
-    }
-  }, [userInfo?.id]); 
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error fetching profile:", error);
+  //       });
+  //   } else {
+  //     console.log("userInfo is not available yet");
+  //   }
+  // }, [userInfo?.id]); 
   
 
   // Logout function
