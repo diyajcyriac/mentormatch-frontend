@@ -1,0 +1,124 @@
+.create-post-container {
+  padding: 40px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  background-color: white;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.create-post-form {
+  width: 100%;
+}
+
+.create-post-form .input-box {
+  margin-bottom: 25px;
+}
+
+.create-post-form .input-box label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.create-post-form .input-box input,
+.create-post-form .input-box textarea {
+  width: 100%;
+  border: 1px solid #dadaf2;
+  border-radius: 5px;
+  outline: none;
+  font-size: 17px;
+  padding: 10px;
+  margin-bottom: 25px;
+  transition: 0.2s ease;
+  background: #f8f8fb;
+  font-weight: 500;
+}
+
+.create-post-form .input-box input:focus,
+.create-post-form .input-box textarea:focus {
+  border-color: black;
+}
+
+.create-post-form .input-box textarea {
+  height: 100px;
+  resize: none;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-update,
+.btn-cancel {
+  flex: 1;
+}
+
+.btn-update {
+  width: 48%;
+  background-color: #171645;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-update:hover {
+  background-color: #14123c;
+}
+
+.btn-cancel {
+  width: 48%;
+  background-color: #f8f8fb;
+  color: #171645;
+  border: 1px solid #dadaf2;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background-color: #ededf5;
+}
+
+@media (max-width: 768px) {
+  .create-post-container {
+      padding: 20px;
+  }
+
+  .create-post-form .input-box input,
+  .create-post-form .input-box textarea {
+      font-size: 15px;
+      padding: 8px;
+  }
+
+  .btn-update,
+  .btn-cancel {
+      font-size: 14px;
+      padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-post-container {
+      padding: 15px;
+  }
+
+  .btn-update,
+  .btn-cancel {
+      width: 100%;
+  }
+
+  .button-group {
+      flex-direction: column;
+      gap: 5px;
+  }
+}

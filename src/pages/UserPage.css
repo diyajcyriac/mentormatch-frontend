@@ -1,0 +1,342 @@
+.profile-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.card-text h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #333;
+}
+
+.card-text h3 {
+  font-size: 1.4rem;
+  margin: 5px 0 0;
+  color: #555;
+}
+.card-text h4 {
+  margin: 0;
+  color: #333;
+}
+
+
+
+
+
+
+
+.card-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  flex-shrink: 0;
+  margin-right: 30px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-top .button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.Edit-link, .Delete-link {
+  width: 100%;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: rgb(48, 47, 47);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.Edit-link:hover, .Delete-link:hover {
+  background-color: rgb(28, 27, 27);
+}
+
+.card-bottom {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.card-bottom p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.card-bottom p strong {
+  color: #333;
+}
+
+.back-link {
+  text-align: center;
+  padding: 12px 20px;
+}
+
+.post-page {
+  /* max-width: 800px; */
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.post-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.post-page time {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.post-page .author {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.post-page .edit-row {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.post-page .edit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.post-page .edit-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.post-page .image {
+  margin: 20px 0;
+  
+  text-align: center;
+}
+
+.post-page .image img {
+  width: 100%;
+  height: 500px;
+  border-radius: 5px;
+}
+
+.post-page .content {
+  margin-top: 20px;
+  color: #444;
+}
+
+.post-page .content p {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+
+  .post-page .image img {
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+  }
+  .profile-container {
+      padding: 15px;
+  }
+
+  .card {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .card-text h2 {
+      font-size: 1.6rem;
+  }
+
+  .card-text h3 {
+      font-size: 1.2rem;
+  }
+
+  .card-image {
+      width: 80px;
+      height: 80px;
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  .post-page h1 {
+      font-size: 2rem;
+  }
+ 
+
+  .post-page .edit-btn {
+      font-size: 0.9rem;
+      padding: 4px 8px;
+  }
+
+  .post-page .content p {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+      padding: 10px;
+  }
+
+  .card-text h2 {
+      font-size: 1.4rem;
+  }
+
+  .card-text h3 {
+      font-size: 1rem;
+  }
+
+  .card-image {
+      width: 70px;
+      height: 70px;
+  }
+
+  .post-page h1 {
+      font-size: 1.8rem;
+  }
+
+  .post-page .content p {
+      font-size: 0.8rem;
+  }
+}
+
+/* Container for the action buttons */
+.request-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Style for Accept button */
+.accept-button {
+  background-color: black; /* Green background */
+  color: white;              /* White text */
+  padding: 10px 20px;        /* Padding for button */
+  border: none;              /* Remove default border */
+  border-radius: 5px;        /* Rounded corners */
+  cursor: pointer;          /* Pointer on hover */
+  font-size: 16px;           /* Text size */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.accept-button:hover {
+  background-color: grey; /* Darker green on hover */
+}
+
+.accept-button:disabled {
+  background-color: #c8e6c9; /* Light green when disabled */
+  cursor: not-allowed;       /* Disabled cursor */
+}
+
+/* Style for Decline button */
+.decline-button {
+  background-color: none; /* Red background */
+  border: black;
+  color: black;              /* White text */
+  padding: 10px 20px;        /* Padding for button */
+  border: none;              /* Remove default border */
+  border-radius: 5px;        /* Rounded corners */
+  cursor: pointer;          /* Pointer on hover */
+  font-size: 16px;           /* Text size */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.decline-button:hover {
+  background-color: grey; /* Darker red on hover */
+}
+
+.decline-button:disabled {
+  background-color: #ffebee; /* Light red when disabled */
+  cursor: not-allowed;       /* Disabled cursor */
+}
+
+.send-request-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  font-weight: bold;
+}
+
+.send-request-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.send-request-button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
