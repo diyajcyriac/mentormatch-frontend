@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 import "./LoginPage.css";
@@ -8,6 +8,12 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [redirect, setRedirect] = useState(false);
   const { setUserInfo } = useContext(UserContext);
+
+  useEffect(() => {
+    alert(
+      "Login as:\nFor mentee: Username: Admin, Password: 1234\nFor mentor: Username: Admin_mentor, Password: 1234"
+    );
+  }, []);
 
   async function login(ev) {
     ev.preventDefault();
