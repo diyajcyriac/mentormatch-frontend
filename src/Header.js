@@ -9,26 +9,26 @@ export default function Header() {
   const navigate = useNavigate();
   const { setUserInfo, userInfo } = useContext(UserContext);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [role, setRole] = useState("");
+  // const [role, setRole] = useState("");
 
   // Fetch user info and role
-  useEffect(() => {
-    fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/profile", {
-      credentials: "include",
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Error: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((profileInfo) => {
-        setUserInfo(profileInfo);
-      })
-      .catch((error) => {
-        console.error("Error fetching user profile:", error);
-      });
-  }, [setUserInfo]);
+  // useEffect(() => {
+  //   fetch("https://mentormatch-q68gbkzuo-diyas-projects-723f1dff.vercel.app/profile", {
+  //     credentials: "include",
+  //   })
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error(`Error: ${response.status}`);
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((profileInfo) => {
+  //       setUserInfo(profileInfo);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching user profile:", error);
+  //     });
+  // }, [setUserInfo]);
 
   useEffect(() => {
     if (userInfo?.id) {
@@ -85,7 +85,7 @@ export default function Header() {
             <Link to="/profiles">People</Link>
             <Link to="/create">Create Post</Link>
             <Link to="/match-making">Match Making</Link>
-            {role === "mentor" && <Link to="/requests">Requests</Link>}
+            {/* {role === "mentor" && <Link to="/requests">Requests</Link>} */}
             <Link to={`/profile/${userId}`}>My Profile</Link>
             <a onClick={logout} style={{ cursor: "pointer" }}>
               Logout
